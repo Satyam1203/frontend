@@ -1,0 +1,218 @@
+*{
+    box-sizing: border-box;
+}
+:root{
+    --border: linear-gradient(to right,hsl(37, 97%, 70%), hsl(329, 70%, 58%));
+    --radius: 5px;
+    --fontSize: 14px;
+}
+body{
+    margin: 0px;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+    background-color: hsl(0, 0%, 100%);
+}
+.main{
+    width:80%;
+    margin: auto;
+    /* display: flex; */
+    /* flex-wrap: wrap; */
+}
+.heading, .overview{
+    margin: 30px 0;
+}
+.head-title{
+    font-size: calc(var(--fontSize)*2);
+    font-weight: 700;
+}
+.head-overview{
+    font-size: calc(var(--fontSize)*1.6);
+    font-weight: 700;
+    color:grey;
+}
+.heading p, .toggle{
+    margin:0;
+    font-weight: 700;
+    font-size: 13px;
+    color:grey
+}
+.toggle{
+    display: flex;
+    align-items: center;
+    margin: 0px 15px;
+}
+.heading{
+    display: flex;
+    justify-content: space-between;
+    align-items: center
+}
+.data, .data2{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.block{
+    width:250px;
+    height:210px;
+    margin:var(--fontSize);
+    padding:var(--fontSize);
+    background-color: hsl(227, 47%, 96%);
+    border-radius: var(--radius);
+    /* text-align: center; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.block2{
+    width:250px;
+    height:100px;
+    margin:var(--fontSize);
+    padding: 7px calc(var(--fontSize)*1.5);
+    background-color: hsl(227, 47%, 96%);
+    border-radius: var(--radius);
+    /* text-align: center; */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+}
+.stats{
+    width:max-content;
+    height:100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.block>div>div{
+    width: min-content;
+    height: min-content;
+}
+.name{
+    font-size: calc(var(--fontSize)*0.8);
+    font-weight: 600;
+    margin: 14px;
+}
+.count{
+    font-size: calc(var(--fontSize)*3.5);
+    font-weight: 700
+}
+.typography{
+    text-transform: uppercase;
+    font-size: calc(var(--fontSize));
+    letter-spacing: var(--radius);
+    font-weight: 400;
+}
+.today, .day-hike{
+    margin-top: 28px;
+    color: hsl(163, 72%, 41%);
+    font-size: calc(var(--fontSize)*0.8);
+    font-weight: 700;
+}
+.today-less{
+    margin-top: 28px;
+    color: hsl(356, 69%, 56%);
+    font-size: calc(var(--fontSize)*0.8);
+    font-weight: 700;
+}
+.fb{
+    border-top: 5px solid hsl(195, 100%, 50%);
+}
+.tw{
+    border-top: 5px solid hsl(203, 89%, 53%);
+}
+.in{
+    border-top: 5px solid;
+    border-image-source: var(--border);
+    border-image-slice: 100;
+}
+.yt{
+    border-top: 5px solid hsl(348, 97%, 39%);
+}
+.fa-instagram{
+    /* font-size: 72px; */
+    /* background:  */
+    --webkit-background-clip: text;
+    --webkit-text-fill-color: -webkit-linear-gradient(hsl(37, 97%, 70%), hsl(329, 70%, 58%));
+}
+.title{
+    font-size:calc(var(--fontSize)*0.9);
+    font-weight:700;
+    color:grey
+}
+.day-overview{
+    font-size:calc(var(--fontSize)*2);
+    font-weight: 700;
+}
+.icon{
+    text-align: end;
+}
+.day-hike{
+    margin-top: 0px;
+    font-size: calc(var(--fontSize)*0.7);
+}
+
+
+
+
+
+/* Toggle slider */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+  }
+  
+  .switch input { 
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  input:checked + .slider {
+    background-color: #2196F3;
+  }
+  
+  input:focus + .slider {
+    box-shadow: 0 0 1px #2196F3;
+  }
+  
+  input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+  }
+  
+  /* Rounded sliders */
+  .slider.round {
+    border-radius: 34px;
+  }
+  
+  .slider.round:before {
+    border-radius: 50%;
+  }
