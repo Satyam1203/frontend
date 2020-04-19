@@ -9,7 +9,7 @@
   <link href="https://fonts.googleapis.com/css?family=Inter&display=swap" rel="stylesheet">
   <title>Frontend Mentor | Social Media Dashboard</title>
   <style>
-    .attribution { font-size: 11px; text-align: center; }
+    .attribution { font-size: 12px; text-align: center; }
     .attribution a { color: hsl(228, 45%, 44%); }
   </style>
 </head>
@@ -21,12 +21,14 @@
           <div class="head-title">Social Media Dashboard</div>  
           <p>Total Followers: 23,004</p>  
         </div>
-        <div style="display: flex;">
+        <div class="switch-mode">
             <div class="toggle">Dark Mode</div>
-            <label class="switch">
-              <input type="checkbox" checked onchange="changeMode()">
-              <span class="slider round"></span>
-            </label>
+            <div>
+              <label class="switch">
+                <input type="checkbox" checked onchange="changeMode()">
+                <span class="slider round"></span>
+              </label>
+            </div>
         </div>
       </div>
 
@@ -161,7 +163,7 @@
   
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="https://satyam1203.github.io/projects/" target="_blank">Satyam</a>.
+    Coded by <span style="color:red">❤</span><a href="https://satyam1203.github.io/projects/" target="_blank">Satyam</a>.
   </div>
   <script src="script.js"></script>
 </body>
