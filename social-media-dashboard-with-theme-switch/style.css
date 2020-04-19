@@ -11,6 +11,7 @@ body{
     box-sizing: border-box;
     font-family: 'Inter', sans-serif;
     background-color: hsl(0, 0%, 100%);
+    color:hsl(230, 17%, 14%)
 }
 .main{
     width:80%;
@@ -28,13 +29,13 @@ body{
 .head-overview{
     font-size: calc(var(--fontSize)*1.6);
     font-weight: 700;
-    color:grey;
+    color:hsl(228, 34%, 66%);
 }
 .heading p, .toggle{
     margin:0;
     font-weight: 700;
     font-size: 13px;
-    color:grey
+    color:hsl(228, 34%, 66%)
 }
 .toggle{
     display: flex;
@@ -92,6 +93,7 @@ body{
     font-size: calc(var(--fontSize)*0.8);
     font-weight: 600;
     margin: 14px;
+    color: hsl(228, 12%, 44%);
 }
 .count{
     font-size: calc(var(--fontSize)*3.5);
@@ -102,6 +104,7 @@ body{
     font-size: calc(var(--fontSize));
     letter-spacing: var(--radius);
     font-weight: 400;
+    color: hsl(228, 12%, 44%);
 }
 .today, .day-hike{
     margin-top: 28px;
@@ -129,16 +132,10 @@ body{
 .yt{
     border-top: 5px solid hsl(348, 97%, 39%);
 }
-.fa-instagram{
-    /* font-size: 72px; */
-    /* background:  */
-    --webkit-background-clip: text;
-    --webkit-text-fill-color: -webkit-linear-gradient(hsl(37, 97%, 70%), hsl(329, 70%, 58%));
-}
 .title{
     font-size:calc(var(--fontSize)*0.9);
     font-weight:700;
-    color:grey
+    color:hsl(228, 34%, 66%);
 }
 .day-overview{
     font-size:calc(var(--fontSize)*2);
@@ -193,13 +190,8 @@ body{
     -webkit-transition: .4s;
     transition: .4s;
   }
-  
-  input:checked + .slider {
-    background-color: #2196F3;
-  }
-  
-  input:focus + .slider {
-    box-shadow: 0 0 1px #2196F3;
+  input + .slider {
+    background-image: linear-gradient(hsl(210, 78%, 56%), hsl(146, 68%, 55%));
   }
   
   input:checked + .slider:before {

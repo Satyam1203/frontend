@@ -7,7 +7,6 @@
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel="stylesheet" href="style.css">
   <link href="https://fonts.googleapis.com/css?family=Inter&display=swap" rel="stylesheet">
-  <script src="https://kit.fontawesome.com/15e3edaa10.js" crossorigin="anonymous"></script>
   <title>Frontend Mentor | Social Media Dashboard</title>
   <style>
     .attribution { font-size: 11px; text-align: center; }
@@ -25,7 +24,7 @@
         <div style="display: flex;">
             <div class="toggle">Dark Mode</div>
             <label class="switch">
-              <input type="checkbox" checked>
+              <input type="checkbox" checked onchange="changeMode()">
               <span class="slider round"></span>
             </label>
         </div>
@@ -33,31 +32,31 @@
 
       <div class="data">
         <div class="block fb">
-          <div class="name"><i class="fab fa-facebook-square" style="color:#3b5999; font-size:18px"></i> @nathanf</div>
+          <div class="name"><img src="./images/icon-facebook.svg" alt="facebook"> @nathanf</div>
           <div class="count">1987</div>
           <div class="typography">Followers</div>
-          <div class="today"><i class="fas fa-caret-up"></i> 12 Today</div>    
+          <div class="today"><img src="./images/icon-up.svg" alt="up"> 12 Today</div>    
         </div>
 
         <div class="block tw">
-          <div class="name"><i class="fab fa-twitter" style="color:#1b9ff1; font-size:18px"></i> @nathanf</div>
+          <div class="name"><img src="./images/icon-twitter.svg" alt="twitter"> @nathanf</div>
           <div class="count">1044</div>
           <div class="typography">Followers</div>
-          <div class="today"><i class="fas fa-caret-up"></i> 99 Today</div>
+          <div class="today"><img src="./images/icon-up.svg" alt="up"> 99 Today</div>
         </div>
 
         <div class="block in">
-          <div class="name"><img src="https://cdn2.iconfinder.com/data/icons/instagram-new/512/instagram-logo-color-512.png" alt="instagram-icon" width=16px> @realnathanf</div>
+          <div class="name"><img src="./images/icon-instagram.svg" alt="instagram"> @realnathanf</div>
           <div class="count">11k</div>
           <div class="typography">Followers</div>
-          <div class="today"><i class="fas fa-caret-up"></i> 1099 Today</div>
+          <div class="today"><img src="./images/icon-up.svg" alt="up"> 1099 Today</div>
         </div>
 
         <div class="block yt">
-          <div class="name"><i class="fab fa-youtube-square" style="color:#fe0000; font-size:18px;"></i> Nathan F.</div>
+          <div class="name"><img src="./images/icon-youtube.svg" alt="youtube"> Nathan F.</div>
           <div class="count">8239</div>
           <div class="typography">Subscribers</div>
-          <div class="today-less"><i class="fas fa-caret-down"></i> 144 Today</div>
+          <div class="today-less"><img src="./images/icon-down.svg" alt="down"> 144 Today</div>
         </div>
       </div>
 
@@ -74,8 +73,8 @@
             <div class="day-overview">87</div>
           </div>
           <div class="stats">
-            <div class="icon"><i class="fab fa-facebook-square" style="color:#3b5999; font-size:18px"></i></div>
-            <div class="day-hike"><i class="fas fa-caret-up"></i> 3%</div>
+            <div class="icon"><img src="./images/icon-facebook.svg" alt="facebook"></div>
+            <div class="day-hike"><img src="./images/icon-up.svg" alt="up"> 3%</div>
           </div>
         </div>
 
@@ -85,8 +84,8 @@
             <div class="day-overview">52</div>
           </div>
           <div class="stats">
-            <div class="icon"><i class="fab fa-facebook-square" style="color:#3b5999; font-size:18px"></i></div>
-            <div class="today-less day-hike"><i class="fas fa-caret-down"></i> 2%</div>
+            <div class="icon"><img src="./images/icon-facebook.svg" alt="facebook"></div>
+            <div class="today-less day-hike"><img src="./images/icon-down.svg" alt="down"> 2%</div>
           </div>
         </div>
 
@@ -96,8 +95,8 @@
             <div class="day-overview">5462</div>
           </div>
           <div class="stats">
-            <div class="icon"><img src="https://cdn2.iconfinder.com/data/icons/instagram-new/512/instagram-logo-color-512.png" alt="instagram-icon" width=16px></div>
-            <div class="day-hike"><i class="fas fa-caret-up"></i> 2257%</div>
+            <div class="icon"><img src="./images/icon-instagram.svg" alt="instagram"></div>
+            <div class="day-hike"><img src="./images/icon-up.svg" alt="up"> 2257%</div>
           </div>
         </div>
 
@@ -108,8 +107,8 @@
               <div class="day-overview">52k</div>
             </div>
             <div class="stats">
-              <div class="icon"><img src="https://cdn2.iconfinder.com/data/icons/instagram-new/512/instagram-logo-color-512.png" alt="instagram-icon" width=16px></div>
-              <div class="day-hike"><i class="fas fa-caret-up"></i> 1375%</div>
+              <div class="icon"><img src="./images/icon-instagram.svg" alt="instagram"></div>
+              <div class="day-hike"><img src="./images/icon-up.svg" alt="up"> 1375%</div>
             </div>
           </div>
 
@@ -119,8 +118,8 @@
               <div class="day-overview">117</div>
             </div>
             <div class="stats">
-              <div class="icon"><i class="fab fa-twitter" style="color:#1b9ff1; font-size:18px"></i></div>
-              <div class="day-hike"><i class="fas fa-caret-up"></i> 303%</div>
+              <div class="icon"><img src="./images/icon-twitter.svg" alt="twitter"></div>
+              <div class="day-hike"><img src="./images/icon-up.svg" alt="up"> 303%</div>
             </div>
           </div>
 
@@ -130,8 +129,8 @@
               <div class="day-overview">507</div>
             </div>
             <div class="stats">
-              <div class="icon"><i class="fab fa-twitter" style="color:#1b9ff1; font-size:18px"></i></div>
-              <div class="day-hike"><i class="fas fa-caret-up"></i> 553%</div>
+              <div class="icon"><img src="./images/icon-twitter.svg" alt="twitter"></div>
+              <div class="day-hike"><img src="./images/icon-up.svg" alt="up"> 553%</div>
             </div>
           </div>
 
@@ -141,8 +140,8 @@
               <div class="day-overview">107</div>
             </div>
             <div class="stats">
-              <div class="icon"><i class="fab fa-youtube-square" style="color:#fe0000; font-size:18px;"></i></div>
-              <div class="today-less day-hike"><i class="fas fa-caret-down"></i> 19%</div>
+              <div class="icon"><img src="./images/icon-youtube.svg" alt="youtube"></div>
+              <div class="today-less day-hike"><img src="./images/icon-down.svg" alt="down"> 19%</div>
             </div>
           </div>
 
@@ -152,8 +151,8 @@
               <div class="day-overview">1407</div>
             </div>
             <div class="stats">
-              <div class="icon"><i class="fab fa-youtube-square" style="color:#fe0000; font-size:18px;"></i></div>
-              <div class="today-less day-hike"><i class="fas fa-caret-down"></i> 12%</div>
+              <div class="icon"><img src="./images/icon-youtube.svg" alt="youtube"></div>
+              <div class="today-less day-hike"><img src="./images/icon-down.svg" alt="down"> 12%</div>
             </div>
           </div>
       </div>
@@ -162,7 +161,7 @@
   
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="https://satyam1203.github.io/projects/">Satyam</a>.
+    Coded by <a href="https://satyam1203.github.io/projects/" target="_blank">Satyam</a>.
   </div>
   <script src="script.js"></script>
 </body>
