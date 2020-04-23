@@ -1,0 +1,14 @@
+.main{
+    width:80%;
+    margin:100px auto;
+}
+.sectionTitle{
+    font-weight: 700;
+    font-size: 24px;
+}
+.sectionDesc{
+    font-size:14px;
+    color: hsl(257, 7%, 63%);
+    width:50%;
+    margin: auto;
+}

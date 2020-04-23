@@ -1,0 +1,15 @@
+.inputDiv{
+    padding: 30px;
+    background-color: hsl(257, 27%, 26%);
+    background-image: url(../../assets/images/bg-shorten-desktop.svg);
+    background-size: cover;
+    border-radius: 10px;
+}
+#input{
+    border: 0px;
+    outline: 0px;
+    padding:10px;
+    border-radius: 5px;
+    width: 80%;
+    float: left;
+}

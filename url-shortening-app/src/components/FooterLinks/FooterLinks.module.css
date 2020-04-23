@@ -1,0 +1,34 @@
+.footer{
+    background-color: #000;
+    display: flex;
+    flex-direction: row;
+    height: 300px;
+    padding: 50px 10%;
+}
+.titleLogo{
+    width: 30%; 
+    text-align: left; 
+}
+.links{
+    display: flex;
+    flex-direction: column;
+    width:200px;
+    text-align: left;
+}
+.linkHead{
+    color:#FFF;
+    font-weight: 700;
+    padding-bottom: 15px; 
+}
+.link{
+    color:hsl(257, 7%, 63%);
+    padding:5px 0;
+}
+.socialLinks{
+    display: flex;
+    flex-direction: row;
+    /* background-color: red; */
+}
+.socialLinks>div{
+    margin:0 10px;
+}

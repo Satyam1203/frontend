@@ -1,0 +1,26 @@
+.navbar{
+    width: 100%;
+    padding: 40px 0;
+    display: flex;
+    color: hsl(257, 7%, 63%);
+    font-weight: 700;
+    font-size:12px;
+}
+.nav{
+    display: flex;
+    width: 100%;
+    padding:0 20px;
+    justify-content: space-between;
+}
+.links, .authLinks{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    /* padding: 0px 10px; */
+}
+.links>div, .authLinks>div{
+    padding: 0px 10px;
+}
+.authLinks{
+    justify-content: flex-end;
+}
