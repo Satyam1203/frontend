@@ -5,8 +5,11 @@
     color: hsl(257, 7%, 63%);
     font-weight: 700;
     font-size:12px;
+    transition: 0.5ms;
+    justify-content: space-between;
 }
 .nav{
+    display: block;
     display: flex;
     width: 100%;
     padding:0 20px;
@@ -23,4 +26,39 @@
 }
 .authLinks{
     justify-content: flex-end;
+}
+.drawer{
+    display: none;
+}
+@media screen and (max-width:768px){
+    .nav{
+        display: none;
+        top:100px;
+        position: absolute;
+        font-weight: 500;
+        z-index: 100;
+        transition: 0.5ms;
+        background-color: hsl(257, 27%, 26%);
+        border-radius: 10px;
+        padding: 20px;
+        color: #FFF;
+        flex-direction: column;
+        width:80%;
+        margin:auto;
+    }
+    .links, .authLinks{
+        padding:10px;
+        flex-direction: column;
+    }
+    .authLinks{
+        border-top: 1px solid grey;
+    }
+    .links>div, .authLinks>div{
+        padding: 5px;
+    }
+    .drawer{
+        display: flex;
+        align-items: center;
+        transform: scale(1.5);
+    }
 }

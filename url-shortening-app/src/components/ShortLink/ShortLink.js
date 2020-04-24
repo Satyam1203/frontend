@@ -16,8 +16,8 @@ export default function ShortLink(props) {
 
     return (
         <div className={styles.block}>
-            <div>{props.url}</div>
-            <div>
+            <div className={styles.url}>{props.url}</div>
+            <div className={styles.copy}>
                 <input 
                     className={styles.shortUrl} 
                     ref={text} 
@@ -29,7 +29,8 @@ export default function ShortLink(props) {
                     text="Copy"
                     padding="10px 25px"
                     radius="5px"
-                    width="100px"
+                    width="100%"
+                    parentWidth="100%"
                     onClick={copyToClipboard}
                     ref={copied}
                 />

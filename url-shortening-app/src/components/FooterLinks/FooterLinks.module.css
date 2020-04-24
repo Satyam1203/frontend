@@ -2,7 +2,7 @@
     background-color: #000;
     display: flex;
     flex-direction: row;
-    height: 300px;
+    height: max-content;
     padding: 50px 10%;
 }
 .titleLogo{
@@ -31,4 +31,16 @@
 }
 .socialLinks>div{
     margin:0 10px;
+}
+@media screen and (max-width:768px){
+    .footer{
+        flex-direction: column;
+        align-items: center;
+    }
+    .titleLogo, .links{
+        text-align: center;
+    }
+    .links, .socialLinks{
+        margin-top: 40px;
+    }
 }

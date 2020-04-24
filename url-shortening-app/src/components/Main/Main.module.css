@@ -12,3 +12,8 @@
     width:50%;
     margin: auto;
 }
+@media screen and (max-width:768px){
+    .sectionDesc{
+        width: 80%;
+    }
+}

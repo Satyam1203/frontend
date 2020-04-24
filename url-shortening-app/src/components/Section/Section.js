@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './Section.module.css';
-import svg from '../../assets/images/illustration-working.svg';
+// import svg from '../../assets/images/illustration-working.svg';
 import Button from '../Button/Button';
 
 export default function Section() {
@@ -17,7 +17,7 @@ export default function Section() {
                 <Button padding="12px 25px" text="Get Started"/>
             </div>
             <div className={styles.svg}>
-                <img src={svg} alt="svg" width="500px;"/>
+                {/* <img src={svg} alt="svg" width="500px;"/> */}
             </div>
         </div>
     )

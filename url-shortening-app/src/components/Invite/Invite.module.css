@@ -11,3 +11,8 @@
     padding: 10px;
     color: #FFF;
 }
+@media screen and (max-width:768px){
+    .title{
+        font-size: 24px;
+    }
+}

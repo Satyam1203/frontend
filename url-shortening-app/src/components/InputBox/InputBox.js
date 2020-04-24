@@ -22,6 +22,7 @@ export default function InputBox() {
             emptyText.current.style.visibility="visible";
             return;
         }
+        emptyInput.current.style.border="none";
         emptyText.current.style.visibility="hidden";
         axios({
             method: 'POST',
@@ -34,8 +35,8 @@ export default function InputBox() {
             updateErr('');
             const shortUrl="https://rel.ink/"+res.data.hashid;
             addShortenedUrls(shortenedUrls.concat({url, shortUrl}));
-            console.log(shortenedUrls);
-            console.log(res);
+            // console.log(shortenedUrls);
+            // console.log(res);
             // console.log(res);
         })
         .catch((e)=>{
@@ -47,21 +48,24 @@ export default function InputBox() {
     return (
         <>
             <div className={styles.inputDiv}>
-                <input 
-                    type="text"
-                    placeholder="Shorten a link here..."
-                    id={styles.input}
-                    ref={emptyInput}
-                    onChange={(e) => linkChangeHandler(e)}
-                />
+                <div className={styles.input}>
+                    <input 
+                        type="text"
+                        placeholder="Shorten a link here..."
+                        id={styles.input}
+                        ref={emptyInput}
+                        onChange={(e) => linkChangeHandler(e)}
+                    />
+                    <p ref={emptyText}>Please add a link</p>
+                </div>
                 <Button 
                     text="Shorten It!" 
                     radius="5px" 
-                    padding="10px 20px" 
+                    padding="12px 20px" 
+                    width="100%"
                     style={{textAlign: 'right'}}
                     onClick={generateShortUrl}    
                 />
-                <p ref={emptyText}>Please add a link</p>
             </div>
             {err}
             {/* <ShortLink url={'x.url'} shortUrl={'x.shortUrl'}/> */}
