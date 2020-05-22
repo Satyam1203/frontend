@@ -30,17 +30,17 @@
     <div class="section3">
         <h1>Services</h1>
         <div class="services">
-            <div class="card">
+            <div class="card" onmouseover="chng(this)" onmouseout="chng(this)">
                 <h3>Portfolio</h3>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem magnam tempore dicta veritatis, rem, volume.</p>
                 <button>More...</button>
             </div>
-            <div class="card">
+            <div class="card" onmouseover="chng(this)" onmouseout="chng(this)">
                 <h3>Guidence</h3>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem magnam tempore dicta veritatis, rem, volume.</p>
                 <button>More...</button>
             </div>
-            <div class="card">
+            <div class="card" onmouseover="chng(this)" onmouseout="chng(this)">
                 <h3>Development</h3>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem magnam tempore dicta veritatis, rem, volume.</p>
                 <button>More...</button>
@@ -56,5 +56,16 @@
             twitter</pre>
         </div>
     </div>
+    <script>
+        let cards = document.getElementsByClassName('card');
+        const chng = (x) => {
+            // console.log(x.lastElementChild);
+            if(x.lastElementChild.style.visibility==="visible") {
+                x.lastElementChild.style.visibility="hidden";
+            }else{
+                x.lastElementChild.style.visibility="visible";
+            }
+        }
+    </script>
 </body>
 </html>

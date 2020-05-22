@@ -15,6 +15,17 @@ body{
     background-size: cover;
     background-attachment: fixed;
 }
+.section1 button{
+    cursor: pointer;
+    transition: ease-in-out 300ms;
+}
+.section1 button:hover{
+    box-shadow: 2px 3px 4px grey;
+    transform: scale(1.1);
+}
+.section1 button:active{
+    background-color: beige;
+}
 .section1 h1{
     color: azure;
     text-align: center;
@@ -84,17 +95,19 @@ body{
     width: 300px;
     /* height: 150px; */
     text-align: center;
-    cursor: pointer;
-    border-radius: 5px;
+    /* cursor: pointer; */
+    border-radius: 10px;
     padding: 20px;
     background-color: azure;
     margin:20px;
+    transition: ease 500ms;
 }
 .card p {
     color:darkcyan;
 }
 .card:hover{
     background-color: rgba(235, 235, 235, 0.8);
+    transform: scale(1.1);
 }
 .footer{
     width: 100%;
@@ -121,6 +134,10 @@ body{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+}
+.services button{
+    visibility: hidden;
+    cursor: pointer
 }
 @media screen and (max-width: 768px){
     .circle{
