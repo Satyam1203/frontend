@@ -1,0 +1,38 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.file-input{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width:100vw;
+    height:80vh;
+}
+
+/* You can tweak styles sas per your needs. */
+
+#profile-input{
+    width:0;
+    height: 0;
+}
+#profile-input + label{
+    /* background-image: linear-gradient(to right bottom, #21212324, #73822372); */
+    background-color: rgb(32, 178, 170);
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    color: #FFF;
+    cursor: pointer;
+    font-weight: 600;
+    box-shadow: 2px 4px 4px grey;
+}
+#profile-input + label:active {
+	box-shadow: 1px 2px 2px grey;
+}
+#profile-input + label:hover {
+    background-color: rgba(32, 178, 170,0.8);
+}
