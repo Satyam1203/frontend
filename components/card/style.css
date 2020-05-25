@@ -18,9 +18,10 @@ body{
     border-radius: 25px;
     /* cursor: none; */
     position: relative;
-    box-shadow: 1px 2px 4px 1px rgb(46, 121, 185);
+    box-shadow: 1px 2px 4px grey;
     transition-timing-function: ease-in-out;
-    transition-duration: 300ms;
+    transition-duration: 200ms;
+    transition-delay: 300ms;
 }
 .img-container, .card-content{
     width: 100%;
@@ -60,6 +61,9 @@ body{
 .card:hover{
     transform: scale(1.05);
     box-shadow: 3px 6px 6px grey;
+    /* transform: rotate(45deg); */
+    transform: rotateX(90deg);
+    transform: rotateX(0deg);
 }
 .card-content button:hover{
     color:rgb(17, 116, 202);
