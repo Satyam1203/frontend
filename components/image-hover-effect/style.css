@@ -1,0 +1,69 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    display: flex;
+    width:100%;
+    height: 100vh;
+    justify-content: space-around;
+    align-items: center;
+    align-content: center;
+    flex-direction: column;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.image-container {
+    width:300px;
+    height: 400px;
+    position: relative;
+    border-radius: 20px;
+}
+.image-container img{
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+}
+.image-container::before{
+    content: 'Camera Zone';
+    position: absolute;
+    box-sizing: border-box;
+    border-radius: 20px;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    padding: 10px;
+    font-size: 2rem;
+    text-align: center;
+    font-weight: bold;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: rgba(128, 128, 128, 0.5);
+    opacity: 0;
+    transition-timing-function: ease-in-out;
+    transition-duration: 300ms;
+}
+
+.image-container::after{
+    content: 'We capture moments for you...';
+    position: absolute;
+    box-sizing: border-box;
+    border-radius: 20px;
+    width: 100%;
+    /* height: 100%; */
+    right: 0;
+    text-align: center;
+    bottom: 0;
+    color: aqua;
+    padding: 10px;
+    font-size: 1rem;
+    background: rgba(128, 128, 128, 0.5);
+    opacity: 0;
+    transition-timing-function: ease-in-out;
+    transition-duration: 300ms;
+}
+.image-container:hover{
+    cursor: pointer;
+}
+.image-container:hover::before, 
+.image-container:hover::after{
+    opacity: 1;
+}
