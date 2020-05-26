@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <title>Nav Tabs</title>
+</head>
+<body>
+    <main>
+        <div class="title">WhatsApp</div>
+        <div class="nav-tabs">
+            <div class="nav-tab" data-element="chats">Chats</div>
+            <div class="nav-tab" data-element="status">Status</div>
+            <div class="nav-tab" data-element="calls">Calls</div>
+        </div>
+        <div class="content">
+            <div class="section show" id="chats">Chats</div>
+            <div class="section hide" id="status">Status</div>
+            <div class="section hide" id="calls">Calls</div>
+        </div>
+    </main>
+    <script>
+        let navTab = document.getElementsByClassName('nav-tab');
+        let sections = document.getElementsByClassName('section');
+        for(tab of navTab){
+            tab.addEventListener('click', function(t){
+                let id=t.target.dataset.element;
+                let sections = document.getElementsByClassName('section');
+                // t.target.classList.add('white');
+                for(section of sections){
+                    section.classList.remove('show');
+                    section.classList.add('hide');
+                }
+                document.getElementById(id).classList.remove('hide');
+                document.getElementById(id).classList.add('show');
+            });
+        }
+    </script>
+</body>
+</html>
