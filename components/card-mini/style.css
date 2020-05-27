@@ -1,0 +1,115 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding:0;
+}
+body{
+    display: flex;
+    flex-wrap: wrap;
+    height:100vh;
+    width:100%;
+    flex-direction: column;
+    justify-content: space-around;
+    align-content: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.mini-card{
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    height:150px;
+    box-shadow: 1px 2px 3px 2px grey;
+    border-radius:3px;
+    padding: 4px 8px;
+    color:#555;
+}
+
+.content{
+    height: 110px;
+    display: flex;
+    align-items: center;
+}
+.content .text{
+    width:70%;
+    height:90%;
+    padding:4px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    /* white-space: nowrap; */
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.content .text .title{
+    font-size: 10px;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+.content .text .headline{
+    font-size: 1.2rem;
+    font-weight:800;
+    margin-top:4px;
+    text-transform: capitalize;
+}
+.content .text .description{
+    margin-top:4px;
+    font-size:12px;
+    padding-right:8px;
+    line-height: 16px;
+}
+.content .img{
+    width: 80px;
+    height: 80px;
+}
+.content .img img{
+    width:100%;
+    height: 100%;
+    border-radius:5px;
+}
+
+
+.controls{
+    display: flex;
+    justify-content: flex-start;
+    padding-top:4px;
+    height: max-content;
+    border-top:1px solid grey;
+}
+.btn{
+    padding:9px 12px;
+    border: 0;
+    outline:0;
+    /* background: rgba(92, 206, 206, 0.315); */
+    background: transparent;
+    /* color: rgb(80, 151, 209); */
+    font-weight:600;    
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 0 8px;
+    color: #555;
+    text-transform: uppercase;
+    font-size:0.75rem;
+}
+.open:active{
+    color: rgb(76, 228, 76);
+}
+.close:active{
+    color:rgb(228, 76, 76);
+}
+
+
+
+@media screen and (min-width:768px){
+    .open:hover{
+        background-color: #eee;
+        color: rgb(76, 228, 76);
+        transform: scaleX(1.05)
+    }
+    .close:hover{
+        background-color: #eee;
+        color: rgb(228, 76, 76);
+        transform: scaleX(1.05)
+    }
+}
