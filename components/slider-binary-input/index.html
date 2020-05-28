@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <title>Slider - Input</title>
+</head>
+<body>
+    <h1>Slider Binary(Checkbox)</h1>
+    <div class="switch">
+        <label for="binary-input">
+            <input type="checkbox" id="binary-input" value="0">
+            <span class="slider" onclick="checked()"></span>
+        </label>
+    </div>
+    <script>
+        const checked = ()=>{
+            if(document.getElementById('binary-input').value==="0") {
+                document.getElementById('binary-input').value="1";
+                document.getElementsByClassName('slider')[0].classList.add("slideRight");
+                document.querySelector("#binary-input+.slider").style.backgroundImage='linear-gradient(135deg,rgb(255, 113, 125),#FFF222)';
+            }
+            else {
+                document.getElementById('binary-input').value="0";
+                document.getElementsByClassName('slider')[0].classList.remove('slideRight');
+                document.querySelector("#binary-input+.slider").style.backgroundImage='';
+            }
+            
+            // console.log(document.getElementById('binary-input').value)
+        }
+    </script>
+</body>
+</html>
