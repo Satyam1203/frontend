@@ -1,0 +1,62 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0
+}
+body{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    width:100%;
+    height:100vh;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.card-flip{
+    width:400px;
+    height:250px;
+    margin:0;
+    position: relative;
+    cursor: pointer;
+    background-color: #278193;
+    background-image: url(./item.jpeg);
+    background-position: center;
+    transition-duration: 800ms;
+    transform-style: preserve-3d; /* Important property here */
+}
+.card-flip:hover{
+    transform: rotateX(180deg);
+    background-image: none;
+}
+.card-flip .card-front, .card-flip .card-back{
+    position: absolute;
+    width:100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    pointer-events: none;
+    color:#FFF
+}
+.card-flip .card-back{
+    /* display: none; */
+    opacity: 0;
+    transform: rotateX(-180deg);
+}
+.card-flip:hover .card-back{
+    /* display: flex; */
+    opacity: 1;
+    flex-direction: column
+}
+.card-flip:hover .card-front{
+    /* display: none; */
+    opacity: 0;
+}
+.card-flip .card-back button{
+    margin:25px;
+    padding:0.5rem;
+    /* border:2px solid transparent; */
+    border-radius: 0.5rem;
+    background: #db4cac;
+    color: #FFF;
+}
