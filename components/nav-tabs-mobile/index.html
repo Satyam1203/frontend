@@ -26,6 +26,8 @@
         let sections = document.getElementsByClassName('section');
         for(tab of navTab){
             tab.addEventListener('click', function(t){
+                // In order to access data-(DATA) from an html tag, we can use this method 
+                // (e.target.dataset.DATA)
                 let id=t.target.dataset.element;
                 let sections = document.getElementsByClassName('section');
                 // t.target.classList.add('white');

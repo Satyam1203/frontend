@@ -41,6 +41,7 @@ main .nav-tabs .nav-tab{
     position: relative;
     color: #FFF;
     text-transform: uppercase;
+    cursor: pointer;
 }
 
 main .nav-tabs .nav-tab::after{
