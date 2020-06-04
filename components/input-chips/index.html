@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./style.css">
+    <title>Chips | Input</title>
+</head>
+<body>
+    <h2 style="margin-bottom: 100px;text-align: center;">Tell us what you know<br/>(Click on chips)</h2>
+    <div class="input-chips">
+        <div class="chips">HTML5</div>
+        <div class="chips">CSS3</div>
+        <div class="chips">JavaScript</div>
+        <div class="chips">ReactJS</div>
+        <div class="chips">Node.js</div>
+        <div class="chips">Django</div>
+        <div class="chips">PHP</div>
+    </div>
+    <script>
+        // Code required to tweak pseudo element's style - http://mcgivery.com/htmlelement-pseudostyle-settingmodifying-before-and-after-in-javascript/
+        // (function(){a={_b:0,c:function(){this._b++;return this.b;}};HTMLElement.prototype.pseudoStyle=function(d,e,f){var g="pseudoStyles";var h=document.head||document.getElementsByTagName('head')[0];var i=document.getElementById(g)||document.createElement('style');i.id=g;var j="pseudoStyle"+a.c();this.className+=" "+j;i.innerHTML+=" ."+j+":"+d+"{"+e+":"+f+"}";h.appendChild(i);return this;};})();
+        
+            // Method to get styling of pseudo elements
+            // window.getComputedStyle( document.querySelector('selector') , '::before').getPropertyValue('CSSPropertyName')
+            // console.log(window.getComputedStyle(document.querySelectorAll('.chips')[i],'::before').getPropertyValue('left'))
+
+        let chips = document.getElementsByClassName('chips');
+        Array.from(chips).forEach((c,i)=>{
+            c.addEventListener('click', ()=>{
+                c.classList.toggle('chips-hover');
+            })
+        })
+    </script>
+</body>
+</html>
