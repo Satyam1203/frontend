@@ -1,0 +1,38 @@
+*{
+    box-sizing: border-box;
+    padding:0;
+    margin:0;
+}
+body{
+    display: flex;
+    width: 100%;
+    height:100vh;
+    justify-content: center;
+    align-items: center;
+}
+.loader{
+    width:60px;
+    height:60px;
+    background: rgb(197, 92, 110);
+    border-radius: 50%;
+    animation-duration: 1.1s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    animation-name: in-out;
+    /* animation-play-state: running; */
+    /* animation-timing-function: ease-in-out; */
+}
+@keyframes in-out{
+    0%{
+        width:60px;
+        height:60px;
+    }
+    50%{
+        width:20px;
+        height:20px;
+    }
+    100%{
+        width:60px;
+        height:60px;
+    }
+}
