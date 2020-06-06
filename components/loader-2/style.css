@@ -1,0 +1,53 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.loader-bubble{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position: relative;
+}
+.bubble{
+    width: 20px;
+    height: 20px;
+    margin:2px;
+    box-sizing: border-box;
+    border-radius: 50%;
+    background-color: darkslategray;
+    animation: in-out-all 1s infinite;
+}
+.bubble-first{
+    width:18px;
+    height:18px;
+}
+.bubble-second{
+    animation-delay: 250ms;
+}
+.bubble-third{
+    animation-delay: 500ms;
+}
+@keyframes in-out-all{
+    0%{
+        width: 20px;
+        height: 20px;
+    }
+    50%{
+        width: 10px;
+        height: 10px;
+    }
+    100%{
+        width: 20px;
+        height: 20px;
+    }
+}
