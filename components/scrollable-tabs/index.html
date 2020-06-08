@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <title>Scrollable Nav-tabs</title>
+</head>
+<body>
+    <div class="container">
+        <div class="top-content">
+            <div class="title">
+                <h1>Busy Boss</h1>
+            </div>
+            <div class="scrollable-tabs">
+                <div id="active-bar-bottom"></div>
+                <button class="tab" id="active">First</button>
+                <button class="tab">Second</button>
+                <button class="tab">Third</button>
+                <button class="tab">Fourth</button>
+                <button class="tab">Fifth</button>
+                <button class="tab">Sixth</button>
+                <button class="tab">Seventh</button>
+                <button class="tab">Eighth</button>
+                <button class="tab">Ninth</button>
+                <button class="tab">Tenth</button>
+            </div>
+        </div>
+    </div>
+    <script>
+        const tabBtns = document.getElementsByClassName('tab');
+        const activeBar = document.getElementById('active-bar-bottom');
+
+        for(element of tabBtns){
+            element.addEventListener('click', (e)=>{
+                for(el of tabBtns) el.id='';
+                e.target.id = 'active';
+                activeBar.style.left = `${e.target.offsetLeft}px`;
+            })
+        }
+    </script>
+</body>
+</html>
