@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <title>Snackbar</title>
+</head>
+<body>
+    <div class="container">
+        <button id="load-snackbar" onclick="loadSnackbar()">
+            Click to see
+        </button>
+        <div class="snackbar">
+            New notification
+            <button onclick="closeSnackbar(this)">✘</button>
+        </div>
+    </div>
+    <script>
+        const loadSnackbar = () => {
+            document.getElementsByClassName('snackbar')[0].style.bottom = '12px';
+        }
+        const closeSnackbar = (e) => {
+            e.closest('.snackbar').style.bottom = '-50px';
+        }
+    </script>
+</body>
+</html>
