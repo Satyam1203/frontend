@@ -1,0 +1,76 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    width: 100%;
+    height:100vh;
+}
+.svg-animation svg{
+    width: 100%;
+}
+.svg-animation{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size:1.5rem;
+}
+.svg-animation .title{
+    width: inherit;
+    text-align: center;
+}
+.svg-animation h1{
+    position: relative;
+    width: max-content;
+    margin: auto;
+    overflow: hidden;
+}
+.svg-animation h1::after{
+    content: '';
+    border-bottom:3px solid #2662F9;
+    position: absolute;
+    top:0;
+    left:0;
+    right:0;
+    bottom: 0;
+}
+#ball{
+    animation: kick-ball 1200ms infinite linear ;
+    /* animation */
+}
+#foot{
+    animation: foot-kick 1200ms infinite linear;
+    /* animation-delay: 100ms; */
+    transform-origin: center;
+    transform-box: fill-box;
+}
+@keyframes foot-kick{
+    from{
+        transform: rotateZ(10deg);
+    }to{
+        transform: rotateZ(-5deg);
+    }
+}
+@keyframes kick-ball{
+    0%{
+        transform: translateY(10px);
+    }
+    50%{
+        transform: translateY(-100px);
+    }
+    100%{
+        transform: translateY(0px);
+    }
+}
+@media screen and (max-width: 768px){
+    .svg-animation{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
