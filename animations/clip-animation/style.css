@@ -1,0 +1,84 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 30% 30%;
+    justify-items: center;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+body>h1{
+    position: fixed;
+    top:5%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 2.5rem;
+    font-family: Helvetica, sans-serif;
+}
+
+.card-animate{
+    width: 400px;
+    display: grid;
+    border-radius:10px;
+    background: rgb(156, 232, 235)
+}
+
+.card-inner{
+    width:100%;
+    border-radius:10px;
+    background: #2ecc72;
+    color: rgb(255, 255, 255);
+    padding:2rem 1.2rem;
+    clip-path: circle(15% at 0% 0%);
+    transition: clip-path 0.7s ease;
+    cursor: default;
+}
+
+.card-inner>p{
+    font-size: 1.1rem;
+    line-height: 1.2;
+}
+
+.card-animate:hover .card-inner{
+    clip-path: circle(75%);
+}
+
+.card-animate h1{
+    margin: 1rem 0
+}
+
+.card-inner-info{
+    width:100%;
+    position: relative;
+    border-radius:10px;
+    background: #99AAAB;
+    color: rgb(255, 255, 255);
+    padding:2rem 1.2rem;
+    clip-path: circle(12% at 90% 20%);
+    transition: all 0.8s ease;
+    cursor: default;
+
+}
+
+.card-inner-info>span{
+    /* float: right; */
+    position: absolute;
+    right:9%;
+    top:14%;
+    font-size:1.5rem;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.card-inner-info:hover{
+    clip-path: circle(75%);
+    background-color: #487EB0;
+}
