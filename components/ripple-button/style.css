@@ -1,0 +1,63 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+body{
+    height:100vh;
+    background-color: #222;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+h1{
+    text-align: center;
+    color:#EEE;
+    padding-top:20px;
+}
+.container{
+    width: 100%;
+    height: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.ripple-btn{
+    position: relative;
+    cursor: pointer;
+    padding:8px 16px;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size:12px;
+    border-radius: 4px;
+    outline: none;
+    border:none;
+    margin:10px;
+    /* background: rgb(174, 201, 252); */
+    background-image: linear-gradient(45deg, #a18cd1 0%, #fbc2eb 100%);
+    color: #333;
+    overflow: hidden;
+}
+.ripple-btn:nth-child(2){
+    padding: 0.8rem 1.8rem;
+    border-radius: 3rem;
+    background-image: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
+}
+.ripple-circle{
+    position: absolute;
+    transform: translate(-50%,-50%);
+    border-radius: 50%;
+    background-color: #EEE;
+    animation: ripple 0.5s linear;
+    pointer-events: none;
+    /* transform: scale(0); */
+}
+@keyframes ripple{
+    0%{
+        width: 0px;
+        height: 0px;
+        opacity: 0.5;
+    }100%{
+        width: 300px;
+        height: 300px;
+        opacity: 0;
+    }
+}
