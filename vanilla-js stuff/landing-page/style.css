@@ -1,0 +1,123 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    width: 100vw;
+    overflow-x: hidden;
+    overflow-wrap: break-word;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.landing{
+    height: 100vh;
+    position: relative;
+    z-index: -2;
+    background: #333;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.landing .headline{
+    color: #FFF;
+    padding: 1rem;
+    font-size: 1.8rem;
+}
+.main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    z-index: 2;
+    position: relative;
+    background: #FFF;
+}
+nav{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    position: fixed;
+    top:0;
+}
+nav li{
+    display: inline-block;
+    padding:20px;
+    color:#EEE;
+    text-transform: uppercase;
+}
+.rect{
+    width:200px;
+    height: 200px;
+    border: 40px solid #444;
+    background: transparent;
+    position: absolute;
+    bottom: 10px;
+    right: 20px;
+    z-index: -1;
+}
+.circ{
+    width:300px;
+    height: 300px;
+    border: 40px solid #444;
+    border-radius: 50%;
+    background: #444;
+    position: absolute;
+    top: 0px;
+    left: -150px;
+    z-index: -1;
+}
+.text{
+    color: rgb(53, 53, 53);
+    font-weight: bold;
+    font-size: 20em;
+    position: fixed;
+    top:100px;
+    left:50%;
+    z-index:-1;
+}
+.trio{
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-top: 166px solid rgba(53, 53, 53, 1);
+    border-left: 100px solid transparent;
+    border-right: 100px solid transparent;
+    border-radius: 10px;
+    /* transform: rotate(-190deg); */
+    top:5%;
+    left:10%;
+    z-index: -1;
+}
+.shape .trio:nth-child(2){
+    left:15%;
+    z-index: -1;
+}
+/* .shape{
+    position: absolute;
+    top:300px;
+    left:500px;
+    transform: rotate(270deg);
+} */
+
+.gradient-btn{
+    position: relative;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size:16px;
+    outline: none;
+    border:none;
+    margin:20px;
+    padding: 1rem 2.5rem;
+    border-radius: 3rem;
+    background-image: linear-gradient(45deg, #a18cd1 0%, #fbc2eb 100%);
+    color: #333;
+    box-shadow: 2px 3px 4px rgb(83, 83, 83);    
+}
+
+@media screen and (max-width:450px){
+    nav{
+        display: none;
+    }
+}
