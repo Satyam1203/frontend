@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Dynamic List</title>
+</head>
+<body>
+    <h1>Add Sizes</h1>
+    <div class="container">
+        <div class="form">
+            <button class="add" onclick="addSizes()">+</button>
+        </div>
+    </div>
+    <script>
+        const form = document.querySelector('.form');
+        const addSizes = ()=>{
+            const sizeMenu = document.createElement('div');
+            sizeMenu.classList.add('sizes');
+            const sizeInput = document.createElement('input');
+            const priceInput = document.createElement('input');
+            const removeBtn = document.createElement('button');
+            sizeInput.placeholder = "Size (S/M/L/XL etc)";
+            priceInput.placeholder = "Price (in Rupees)";
+            removeBtn.innerText = "❌";
+            priceInput.inputMode = "numeric";
+            removeBtn.addEventListener('click', (e) => {
+                console.log(e);
+                form.removeChild(e.target.closest('.sizes'))
+            })
+            sizeMenu.appendChild(sizeInput);
+            sizeMenu.appendChild(priceInput);
+            sizeMenu.appendChild(removeBtn);
+            form.appendChild(sizeMenu);
+        }
+    </script>
+</body>
+</html>
