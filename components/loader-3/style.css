@@ -1,0 +1,67 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    height: 100vh;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.letter-appear{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.letter-appear div{
+    min-width: 60px;
+    height: 80px;
+    overflow: hidden;
+    font-size: 72px;
+    color: #333;
+    display: inline-block;
+    transform: translateY(100px);
+    animation: letter-up 2000ms infinite;
+}
+.letter-appear div:nth-child(1){
+    color: red;
+    animation-delay: 100ms;
+}
+.letter-appear div:nth-child(2){
+    color: red;
+    animation-delay: 200ms;
+}
+.letter-appear div:nth-child(3){
+    color: red;
+    animation-delay: 300ms;
+}
+.letter-appear div:nth-child(4){
+    animation-delay: 400ms;
+}
+.letter-appear div:nth-child(5){
+    animation-delay: 500ms;
+}
+.letter-appear div:nth-child(6){
+    animation-delay: 600ms;
+}
+.letter-appear div:nth-child(7){
+    animation-delay: 700ms;
+}
+.letter-appear div:nth-child(8){
+    animation-delay: 800ms;
+}
+.letter-appear div:nth-child(9){
+    animation-delay: 900ms;
+}
+@keyframes letter-up{
+    0%{
+        transform: translateY(100px);
+        /* opacity: 0; */
+        display: none;
+    }
+    100%{
+        transform: translateY(0px);
+        /* opacity: 1; */
+        display: inline-block;
+    }
+}
