@@ -1,0 +1,60 @@
+:root{
+    --background: #333;
+    --sensor-color: #111;
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-align: center;
+}
+h1{
+    margin: 1rem;
+}
+.mobile{
+    margin: auto;
+    width: 412px;
+    border: 12px solid var(--background);
+    border-radius: 3rem;
+    overflow: hidden;
+    transform: scale(0.8);
+}
+.mobile .main-section{
+    height: 732px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+.mobile .mobile-top, .mobile .mobile-bottom{
+    position: relative;
+    height: 80px;
+    background-color: var(--background);
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    align-items: center;
+}
+.mobile .sensor{
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: var(--sensor-color);
+    border-radius: 50%;
+    top: 50%;
+    left: 16%;
+    transform: translateY(-50%);
+}
+.mobile .earpiece, .mobile .speaker{
+    width: 160px;
+    height: 14px;
+    background-color: #111;
+    border-radius: 1rem;
+}
+.mobile .mobile-bottom{
+    height: 60px;
+}
