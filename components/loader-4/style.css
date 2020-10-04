@@ -32,4 +32,17 @@
       transform: scale(0);
     }
   }
+
+footer {
+    position: absolute;
+    bottom: 1vw;
+    width: 90%;
+}
   
+footer p {
+    font-family: 'Kaushan Script', cursive;
+    color: darkviolet;
+    font-weight: bold;
+    font-size: 22px;
+    float: right;
+}
