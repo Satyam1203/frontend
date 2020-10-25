@@ -1,0 +1,49 @@
+{
+    "particles":{
+        "number":{
+            "value":300
+        },
+        "shape":{
+            "type":"triangle",
+            "stroke":{
+                "width":4,
+                "color":"#fff"
+            }
+        },
+        "opacity":{
+            "value":0.8,
+            "anim":{
+                "enable":true,
+                "speed": 100
+            }
+        },
+        "size":{
+            "value":2,
+            "random":true,
+            "anim":{
+                "enable":true,
+                "speed":2
+            }
+        },
+        "line_linked":{
+            "distance":150,
+            "width":0.9
+        },
+        "move":{
+            "speed":30
+        }
+    },
+
+    "interactivity":{
+        "events":{
+            "onhover":{
+                "mode":["grab", "bubble"]
+            }
+        },
+        "modes":{
+            "bubble":{
+                "size":2
+            }
+        }
+    }
+}
