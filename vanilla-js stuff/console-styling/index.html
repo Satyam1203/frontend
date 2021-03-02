@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Console Styling</title>
+</head>
+<body>
+    <h1>Open the Console Tab in DevTools, See the contents styled.</h1> 
+    <p>For each %c, you can add styling correspondingly. It ranges starting from %c till the next %c or the end.</p> 
+    <script>
+        console.log(
+            "%cSatyam1203 %cSatyam", 
+            "font-size: 20px; background-color: lightblue; font-weight: bold; padding: 10px", 
+            "font-size: 12px; background-color: darkslateblue; color: #FFF; text-transform: uppercase; padding:10px 20px"
+        );
+    </script>
+</body>
+</html>
